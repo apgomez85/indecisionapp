@@ -8,7 +8,7 @@ class IndecisionApp extends React.Component {
       <div>
         <Header title={title} subtitle={subtitle} />
         <Action />
-        <Options list={options} />
+        <Options options={options} />
         <AddOption />
       </div>
     );
@@ -40,8 +40,9 @@ class Options extends React.Component {
   render() {
     return (
       <div>
-        {this.props.list.length}
-        <Option />
+        {this.props.options.map(option => (
+          <Option key={option} optionText={option} />
+        ))}
       </div>
     );
   }
@@ -49,7 +50,7 @@ class Options extends React.Component {
 
 class Option extends React.Component {
   render() {
-    return <div>Option Component Here</div>;
+    return <div>{this.props.optionText}</div>;
   }
 }
 
