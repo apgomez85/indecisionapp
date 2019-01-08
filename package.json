@@ -13,7 +13,8 @@
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "validator": "^10.10.0",
-    "webpack": "^4.28.2"
+    "webpack": "^4.28.2",
+    "webpack-dev-server": "^3.1.14"
   },
   "devDependencies": {
     "webpack-cli": "^3.1.2"
@@ -21,8 +22,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "live-server public/",
-    "build-babel": "babel src/app.js --out-file=public/scripts/app.js --presets=env,react --watch",
-    "build": "webpack --mode development --watch"
+    "build": "webpack",
+    "dev-server": "webpack-dev-server"
   },
   "author": "Adrian Gomez",
   "license": "ISC"
